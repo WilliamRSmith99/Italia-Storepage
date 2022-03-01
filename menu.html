@@ -1,0 +1,697 @@
+<style>
+    body {
+    overflow-x:hidden;
+    height:100%;
+    }
+    .indiv-item{
+        margin: 1rem 2rem;
+        border-bottom: black dotted;
+    }
+    .menu-sect{
+        margin: 4rem 0;
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+    .menu-name{
+        width:30ex;
+    }
+    .row{
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0 0;
+    }
+    .pizza{
+        padding: 0 0;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .menu-name{
+        padding-top: .5em;
+    }
+</style>
+<script>
+    function changeVisibility(e) {
+    var elements = document.querySelectorAll(".active");
+    [].forEach.call(elements, function(el) {
+        el.classList.remove("active");
+    });
+    document.getElementById(e).classList.add("active") ;
+
+   
+    var iframeWin = parent.document.getElementById("IframeMenu");
+    iframeWin.height = 0;
+    iframeWin.height = document.body.scrollHeight;
+
+
+    }
+
+    function InitHeight(){
+        var iframeWin = parent.document.getElementById("IframeMenu");
+        iframeWin.height = document.body.scrollHeight;
+    }
+
+</script>
+<body onload="InitHeight()">
+<nav style="text-align: center; color: black; text-decoration: none;">
+      
+        <a onclick="changeVisibility('Pizza'); " href="#" style="text-align: center; color: black; text-decoration: none;">Pizza & More</a>
+        |  
+        <a onclick="changeVisibility('Appetizers')"  href="#" style="text-align: center; color: black; text-decoration: none;">Appetizers</a>
+        |
+        <a onclick="changeVisibility('wraps'); "  href="#" style="text-align: center; color: black; text-decoration: none;">Wraps </a>
+        |
+        <a onclick="changeVisibility('Sandwiches');"  href="#" style="text-align: center; color: black; text-decoration: none;">Sandwiches </a>
+        |
+        <a onclick="changeVisibility('Salad')"  href="#" style="text-align: center; color: black; text-decoration: none;">Salad</a>
+        |
+        <a onclick="changeVisibility('Entrees')"  href="#" style="text-align: center; color: black; text-decoration: none;">Entrees</a>
+        |
+        <a onclick="changeVisibility('Soups & Sides')"  href="#" style="text-align: center; color: black; text-decoration: none;">Soups & Sides</a>
+</nav>
+
+<div class="container">
+    <div class="menu-sect active" id='Pizza'>
+        <h1 style="text-align: center;">Pizza & More</h1>
+        <h2 style="text-align: center;">Pizza</h2>
+        <div class="Pizza" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>Slice</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Medium</b></p></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>Large</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$2.60</p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$13.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >White</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$3.85</p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$20.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Supreme (Sausage, Pepperoni & Mushrooms)</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$20.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$22.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Margarita</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$3.85</p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$19.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$21.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Vegetarian (Mixed Vegetables)</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$21.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$23.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Meat Lovers</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$22.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$25.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Buffalo Chicken</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$3.85</p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$20.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$22.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Parmigiana</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$19.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$21.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Grilled Chicken</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$20.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$22.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Baked Eggplant</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$19.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$21.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Hawaiian (Pineapple and Ham)</div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>------</b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$19.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$21.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Sicilian</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$3.85</p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$19.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><b>------</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Bacon BBQ</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$3.85</p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$21.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$23.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;">
+                <div class="" style="padding-right: 5x;padding-top: 5px;" ><b>(Extra Topping per pie $3.00, Any Additions $2.00)</b></div>
+            </div>
+        </div>
+        <p> </p>
+           
+        <h2 style="text-align: center;">Stromboli</h2>
+        <div class="Pizza" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>--------</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>-------</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Pepperoni & Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$10.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Sausage & Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$10.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Spinach & Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$10.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Broccoli & Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$10.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Grilled Chicken & Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >The Works (everything)</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$16.95</p></div>
+            </div>
+        </div>
+        <p></p>
+            
+        <h2 style="text-align: center;">Calzone</h2>
+        <div class="Pizza" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 220px;" ><b></b></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Mozzarella & Ricotta</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;"><font color='#d3d3d3'>----</font></p></div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Create your own</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">* $1.00 extra per ingredient</p></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="menu-sect" id='Appetizers'>
+        <h1 style="text-align: center;">Appetizers</h1>
+        <div class="Appetizers" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 220px;" ><b></b></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Eggplant Rollatine (Add Pasta $2.00)</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$12.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Broccoli Rabe Sauteed w/Garlic & Oive Oil</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Sauteed Spinach or Broccoli</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Antipasto Salad</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Roasted Red Peppers & Tomato Salad (Add Fresh Mozzarella $2.00)</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-sect" id='wraps'>
+        <h1 style="text-align: center;">Wraps</h1>
+        <div class="Wraps" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 220px;" ><b></b></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Grilled Chicken Caesar</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Spinach & Mozzarella</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Broccoli & Mozzarella</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Pepperoni & Mozzarella</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$10.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Turkey & Cheese</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$10.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Grilled Chicken & Mozzarella</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Buffalo Chicken & Mozzarella</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken & Mozzarella</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Roasted Red Peppers Chicken Parmigiana</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Eggplant Parmigiana</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Ham, Salami & Provolone</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-sect" id='Sandwiches'>
+        <h1 style="text-align: center;">Sandwiches</h1>
+        <p>
+            
+        </p>
+        <h2 style="text-align: center;">Cold Subs</h2>
+        <div style="text-align: center;">*Optional: Lettuce, Tomato, Onion, Oil, Vinegar, Mayo</div>
+        <div class="Sandwiches" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Reg 6"</b></p></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>Lg 12"</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken & Cheese (Grilled/Fried)</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Ham,Salami, Provolone</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Ham, Capicola, Provolone</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Turkey & Cheese</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Proscuitto & Roast Red Peppers w/ Fresh Mozzarella</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Grilled Chicken & Broccoli w/ Fresh Mozzarella</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>     
+            <p>
+
+            </p>
+        </div>
+        <h2 style="text-align: center;">Hot Subs</h2>
+        <div class="Sandwiches" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Reg 6"</b></p></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>Lg 12"</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Peppers & Eggs</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken & Peppers</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Parmigiana</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Meatball Parmigiana</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Sausage Parmigiana</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Eggplant Parmigiana</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Cheese Steak w/ Sweet Peppers, Potatoes, & Onions</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Italian Sausage w/ Sweet Peppers, Potatoes, & Onions</div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;"></p></div>
+                <div class="medium-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.95</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-sect" id='Salad'>
+        <h1 style="text-align: center;">Salad</h1>
+        <div class="Entrees" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="Medium" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Medium</b></p></div>
+                <div class="Large" style=""><p style="padding-left: 6em;padding-right: 1em;"><b>Large</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>House Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Caessar Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$8.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Grilled Chicken Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$14.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Crispy Chicken Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Grilled Chicken Caesar Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$114.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Crispy Chicken Caesar Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Buffalo Chicken Salad</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.50</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Turkey & Cheese</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.50</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.50</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-sect" id='Entrees'>
+        <h1 style="text-align: center;">Entrees</h1>
+        <p>     
+        </p>
+        <h2 style="text-align: center;">Chicken</h2>
+        <div class="Entrees" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 220px;" ><b></b></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 2em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Parmigiana</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Marsala</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Murphy</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Francaise</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Cacciatori</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+             <p>
+                
+            </p>
+        </div>
+        <h2 style="text-align: center;">Pasta</h2>
+        <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;">
+            <div class="" style="padding-right: 5px;padding-top: 5px;" >* Dinner Served w/ Salad</div>
+        </div>
+        <div class="Entrees" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Lunch</b></p></div>
+                <div class="dinner" style=""><p style="padding-left: 6em;padding-right: 1em;"><b>Dinner</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Pasta w/ Marinara Sauce</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$15.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Spaghetti w/ Meatballs or Sausages</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Rigatoni w/ Meatballs or Sausage</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$13.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Fettuccine Alfredo (Add Chicken $2.00)</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Penne Vodka</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$12.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Linguine Grilled Chicken</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$13.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Penne Grilled Chicken</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$13.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <p>
+
+            </p>
+        </div>
+        <h2 style="text-align: center;">Baked Dishes</h2>
+        <div class="Entrees" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Lunch</b></p></div>
+                <div class="dinner" style=""><p style="padding-left: 6em;padding-right: 1em;"><b>Dinner</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Ziti</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Lasagna</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Ravioli</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Eggplant</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Stuffed Shells</b></div>
+                <div class="lunch" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+                <div class="dinner" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$18.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;">
+                <div class="" style="padding-right: 5x;padding-top: 5px;" ><b>(Add Chicken, Sausage, or Meatballs $2.00)</b></div>
+            </div>
+            <p>
+                
+            </p>
+        </div>
+        <h2 style="text-align: center;">Burgers</h2>
+        <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;">
+            <div class="" style="padding-right: 5px;padding-top: 5px;" >* All burgers are served with fries and choice of lettuce, tomato, onions, and mayo</div>
+        </div>
+        <div class="Entrees" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 220px;" ><b></b></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 2em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Hamburger</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Cheese Burger</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Bacon Cheese Burger</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Italian Cheese Burger</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$17.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Chicken Cacciatori</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+    </div>
+    </div>
+    <div class="menu-sect" id='Soups & Sides'>
+        <h1 style="text-align: center;">Soups & Sides</h1>
+        <h2 style="text-align: center;">Soups</h2>
+        <div class="Soups" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b></div>
+                <div class="small-price" style=""> <p style="padding-left: 1em;padding-right: 1em;"><b>Small 12oz</b></p></div>
+                <div class="large-price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b>Large 16oz</b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Chicken Noodle</b></div>
+                <div class="small-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$5.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$6.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Minetrone</b></div>
+                <div class="small-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$5.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$6.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Lentil</b></div>
+                <div class="small-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$5.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$6.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Pasta Fagioli</b></div>
+                <div class="small-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$5.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$6.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" ><b></b>Chicken Tortellini</b></div>
+                <div class="small-price" style=""> <p style="padding-left: 1rem;padding-right: 1rem;">$5.95</p></div>
+                <div class="large-price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$6.95</p></div>
+            </div>
+        </div>
+        <h2 style="text-align: center;">Sides</h2>
+        <div class="Soups & Sides" style="display: flex; flex-direction: column; padding: 0 6rem; ">
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0; border-bottom: black solid;">
+                <div class="menu-name" style="padding-right: 220px;" ><b></b></div>
+                <div class="price" style=""><p style="padding-left: 1em;padding-right: 1em;"><b></b></p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Eggplant Rollatine (Add Pasta $2.00)</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$12.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Broccali Rabe Sauteed w/Garlic & Oive Oil</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Sauteed Spinach or Broccoli</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$8.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Antipasto Salad</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$11.95</p></div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 0 0;border-bottom: black dotted;">
+                <div class="menu-name" style="padding-right: 40px;" >Roasted Red Peppers & Tomato Salad (Add Fresh Mozzarella $2.00)</div>
+                <div class="price" style=""><p style="padding-left: 1rem;padding-right: 1rem;">$9.95</p></div>
+            </div>
+        </div>
+    </div> 
+</div>
+</body>
